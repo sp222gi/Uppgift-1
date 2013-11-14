@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tri", "Tri\Tri.csproj", "{B64206A6-BAF5-40E3-B9CB-0353BA57AFB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriTest", "TriTest\TriTest.csproj", "{A56D3BBA-0B85-4A51-B612-35D948CB28DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B64206A6-BAF5-40E3-B9CB-0353BA57AFB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B64206A6-BAF5-40E3-B9CB-0353BA57AFB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B64206A6-BAF5-40E3-B9CB-0353BA57AFB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B64206A6-BAF5-40E3-B9CB-0353BA57AFB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A56D3BBA-0B85-4A51-B612-35D948CB28DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A56D3BBA-0B85-4A51-B612-35D948CB28DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A56D3BBA-0B85-4A51-B612-35D948CB28DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A56D3BBA-0B85-4A51-B612-35D948CB28DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
