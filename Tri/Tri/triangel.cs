@@ -41,15 +41,15 @@ public class Triangle {
   private int uniqueSides() {
     return sides.Distinct<double>().Count();
   }
-
+//bytte plats på 3 och 1 i isScalene och isEquilateral
   public bool isScalene() {
-    if(uniqueSides()==1)
+    if(uniqueSides()==3)
       return true;
     return false;
   }
 
   public bool isEquilateral() {
-    if(uniqueSides()==3)
+    if(uniqueSides()==1)
       return true;
     return false;
   }

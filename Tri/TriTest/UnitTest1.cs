@@ -6,98 +6,272 @@ namespace TriTest
     [TestClass]
     public class UnitTest1
     {
-        //Good to know!
-        //n = new number
-        //nn = negative number
-        //d = decimal
-        //o = object
+        [TestMethod]
+        public void LiksidigScalene()
+        {
+            Triangle liksidig = new Triangle(1, 1, 1);
+            Assert.IsFalse(liksidig.isScalene());
+        }
+        [TestMethod]
+        public void LiksidigIsosceles()
+        {
+            Triangle liksidig = new Triangle(1, 1, 1);
+            Assert.IsFalse(liksidig.isIsosceles());
+        }
+        [TestMethod]
+        public void LiksidigEquilateral()
+        {
+            Triangle liksidig = new Triangle(1, 1, 1);
+            Assert.IsTrue(liksidig.isEquilateral());
+        }
+        [TestMethod]
+        public void LikbentScalene()
+        {
+            Triangle likbent = new Triangle(1, 2, 2);
+            Assert.IsFalse(likbent.isScalene());
+        }
+        [TestMethod]
+        public void LikbentIsosceles()
+        {
+            Triangle likbent = new Triangle(1, 2, 2);
+            Assert.IsTrue(likbent.isIsosceles());
+        }
+        [TestMethod]
+        public void LikbentEquilateral()
+        {
+            Triangle likbent = new Triangle(1, 2, 2);
+            Assert.IsFalse(likbent.isEquilateral());
+        }
+        [TestMethod]
+        public void OlikScalene()
+        {
+            Triangle olik = new Triangle(3, 4, 5);
+            Assert.IsTrue(olik.isScalene());
+        }
+        [TestMethod]
+        public void OlikIsosceles()
+        {
+            Triangle olik = new Triangle(3, 4, 5);
+            Assert.IsFalse(olik.isIsosceles());
+        }
+        [TestMethod]
+        public void OlikEquilateral()
+        {
+            Triangle olik = new Triangle(3, 4, 5);
+            Assert.IsFalse(olik.isEquilateral());
+        }
+
+
 
         [TestMethod]
-        public void isScalene()
+        public void LikbentArrayScalene()
         {
-            Triangle n1n1n1 = new Triangle(1, 1, 1);
-            Assert.IsTrue(n1n1n1.isScalene());
-            Triangle n2n1n1 = new Triangle(2, 1, 1);
-            Assert.IsFalse(n2n1n1.isScalene());
-            Triangle n2n3n1 = new Triangle(2, 3, 1);
-            Assert.IsFalse(n2n3n1.isScalene());
+            double[] likbentDouble = new double[3] { 5, 5, 7 };
+            Triangle LikbentArray = new Triangle(likbentDouble);
+            Assert.IsFalse(LikbentArray.isScalene());
+        }
+        [TestMethod]
+        public void LikbentArrayIsoSceles()
+        {
+            double[] likbentDouble = new double[3] { 5, 5, 7 };
+            Triangle LikbentArray = new Triangle(likbentDouble);
+            Assert.IsTrue(LikbentArray.isIsosceles());
+        }
+        [TestMethod]
+        public void LikbentArrayEquilateral()
+        {
+            double[] likbentDouble = new double[3] { 5, 5, 7 };
+            Triangle LikbentArray = new Triangle(likbentDouble);
 
-            double[] an1n2n3 = new double[3] { 1, 2, 3 };
-            double[] an1n3n5 = new double[3] { 1, 3, 5 };
-
-            Triangle on1n2n3 = new Triangle(an1n2n3);
-            Assert.IsFalse(on1n2n3.isScalene());
-            Triangle on1n3n5 = new Triangle(an1n3n5);
-            Assert.IsFalse(on1n3n5.isScalene());
-
-            Point n1n1 = new Point(1, 1);
-            Point n1n2 = new Point(1, 2);
-
-            Point[] aon1n2on1n2on1n2 = new Point[3] { n1n2, n1n2, n1n2 };
-            Point[] aon1n2on1n1on1n1 = new Point[3] { n1n2, n1n2, n1n2 };
-
-            Triangle oaon1n2on1n2on1n2 = new Triangle(aon1n2on1n2on1n2);
-            Assert.IsTrue(oaon1n2on1n2on1n2.isScalene());
-            Triangle oaon1n2on1n1on1n1 = new Triangle(aon1n2on1n1on1n1);
-            Assert.IsTrue(oaon1n2on1n1on1n1.isScalene());
-
-            Triangle on1n2on1n2on1n2 = new Triangle(n1n2, n1n2, n1n2);
-            Assert.IsTrue(on1n2on1n2on1n2.isScalene());
-            Triangle on1n2on1n1on1n1 = new Triangle(n1n2, n1n1, n1n1);
-            Assert.IsFalse(on1n2on1n1on1n1.isScalene());
+            Assert.IsFalse(LikbentArray.isEquilateral());
+        }
+        [TestMethod]
+        public void OlikArrayScalene()
+        {
+            double[] olikDouble = new double[3] { 3, 4, 5 };
+            Triangle OlikArray = new Triangle(olikDouble);
+            Assert.IsTrue(OlikArray.isScalene());
+        }
+        [TestMethod]
+        public void OlikArrayIsosceles()
+        {
+            double[] olikDouble = new double[3] { 3, 4, 5 };
+            Triangle OlikArray = new Triangle(olikDouble);
+            Assert.IsFalse(OlikArray.isIsosceles());
+        }
+        [TestMethod]
+        public void OlikArrayEquilateral()
+        {
+            double[] olikDouble = new double[3] { 3, 4, 5 };
+            Triangle OlikArray = new Triangle(olikDouble);
+            Assert.IsFalse(OlikArray.isEquilateral());
+        }
+        [TestMethod]
+        public void LiksidigArrayScalene()
+        {
+            double[] liksidigDouble = new double[3] { 4, 4, 4 };
+            Triangle LiksidigArray = new Triangle(liksidigDouble);
+            Assert.IsFalse(LiksidigArray.isScalene());
+        }
+        [TestMethod]
+        public void LiksidigArrayIsosceles()
+        {
+            double[] liksidigDouble = new double[3] { 4, 4, 4 };
+            Triangle LiksidigArray = new Triangle(liksidigDouble);
+            Assert.IsFalse(LiksidigArray.isIsosceles());
+        }
+        [TestMethod]
+        public void LiksidigArrayEquilateral()
+        {
+            double[] liksidigDouble = new double[3] { 4, 4, 4 };
+            Triangle LiksidigArray = new Triangle(liksidigDouble);
+            Assert.IsTrue(LiksidigArray.isEquilateral());
         }
 
         [TestMethod]
-        public void isIsosceles()
+        public void ArrayMedTreLikaObjektScalene()
         {
-            Triangle n1n1n1 = new Triangle(1, 1, 1);
-            Assert.IsFalse(n1n1n1.isIsosceles());
-            Triangle n2n1n1 = new Triangle(2, 1, 1);
-            Assert.IsTrue(n2n1n1.isIsosceles());
-            Triangle n2n3n1 = new Triangle(2, 3, 1);
-            Assert.IsFalse(n2n3n1.isIsosceles());
+            Point pointLik = new Point(1, 1);
 
-            double[] an1n2n3 = new double[3] { 1, 2, 3 };
-            double[] an1n3n5 = new double[3] { 1, 3, 5 };
+            Point[] pointsLika = new Point[3] { pointLik, pointLik, pointLik };
 
-            Triangle on1n2n3 = new Triangle(an1n2n3);
-            Assert.IsFalse(on1n2n3.isIsosceles());
-            Triangle on1n3n5 = new Triangle(an1n3n5);
-            Assert.IsFalse(on1n3n5.isIsosceles());
-
-            Point n1n1 = new Point(1, 1);
-            Point n1n2 = new Point(1, 2);
-
-            Triangle on1n2on1n2on1n2 = new Triangle(n1n2, n1n2, n1n2);
-            Assert.IsFalse(on1n2on1n2on1n2.isIsosceles());
-            Triangle on1n2on1n1on1n1 = new Triangle(n1n2, n1n1, n1n1);
-            Assert.IsTrue(on1n2on1n1on1n1.isIsosceles());
+            Triangle ArrayMedTreLikaObjekt = new Triangle(pointsLika);
+            Assert.IsFalse(ArrayMedTreLikaObjekt.isScalene());
         }
         [TestMethod]
-        public void isEquilateral()
+        public void ArrayMedTreLikaObjektIsosceles()
         {
-            Triangle n1n1n1 = new Triangle(1, 1, 1);
-            Assert.IsFalse(n1n1n1.isEquilateral());
-            Triangle n2n1n1 = new Triangle(2, 1, 1);
-            Assert.IsFalse(n2n1n1.isEquilateral());
-            Triangle n2n3n1 = new Triangle(2, 3, 1);
-            Assert.IsTrue(n2n3n1.isEquilateral());
+            Point pointLik = new Point(1, 1);
 
-            double[] an1n2n3 = new double[3] { 1, 2, 3 };
-            double[] an1n3n5 = new double[3] { 1, 3, 5 };
+            Point[] pointsLika = new Point[3] { pointLik, pointLik, pointLik };
 
-            Triangle on1n2n3 = new Triangle(an1n2n3);
-            Assert.IsTrue(on1n2n3.isEquilateral());
-            Triangle on1n3n5 = new Triangle(an1n3n5);
-            Assert.IsTrue(on1n3n5.isEquilateral());
+            Triangle ArrayMedTreLikaObjekt = new Triangle(pointsLika);
+            Assert.IsFalse(ArrayMedTreLikaObjekt.isIsosceles());
+        }
+        [TestMethod]
+        public void ArrayMedTreLikaObjektEquilateral()
+        {
+            Point pointLik = new Point(1, 1);
 
-            Point n1n1 = new Point(1, 1);
-            Point n1n2 = new Point(1, 2);
+            Point[] pointsLika = new Point[3] { pointLik, pointLik, pointLik };
 
-            Triangle on1n2on1n2on1n2 = new Triangle(n1n2, n1n2, n1n2);
-            Assert.IsFalse(on1n2on1n2on1n2.isEquilateral());
-            Triangle on1n2on1n1on1n1 = new Triangle(n1n2, n1n1, n1n1);
-            Assert.IsFalse(on1n2on1n1on1n1.isEquilateral());
+            Triangle ArrayMedTreLikaObjekt = new Triangle(pointsLika);
+            Assert.IsTrue(ArrayMedTreLikaObjekt.isEquilateral());
+        }
+        [TestMethod]
+        public void ArrayMedTreObjektTvaOlikaScalene()
+        {
+            Point pointLik = new Point(1, 1);
+            Point pointOlik = new Point(1, 2);
+
+            Point[] pointOlika = new Point[3] { pointLik, pointOlik, pointOlik };
+
+            Triangle ArrayMedTreObjektTvaOlika = new Triangle(pointOlika);
+            Assert.IsFalse(ArrayMedTreObjektTvaOlika.isScalene());
+        }
+        [TestMethod]
+        public void ArrayMedTreObjektTvaOlikaIsosceles()
+        {
+            Point pointLik = new Point(1, 1);
+            Point pointOlik = new Point(1, 2);
+
+            Point[] pointOlika = new Point[3] { pointLik, pointOlik, pointOlik };
+
+            Triangle ArrayMedTreObjektTvaOlika = new Triangle(pointOlika);
+            Assert.IsTrue(ArrayMedTreObjektTvaOlika.isIsosceles());
+        }
+        [TestMethod]
+        public void ArrayMedTreObjektTvaOlikaEquilateral()
+        {
+            Point pointLik = new Point(1, 1);
+            Point pointOlik = new Point(1, 2);
+
+            Point[] pointOlika = new Point[3] { pointLik, pointOlik, pointOlik };
+
+            Triangle ArrayMedTreObjektTvaOlika = new Triangle(pointOlika);
+            Assert.IsFalse(ArrayMedTreObjektTvaOlika.isEquilateral());
+        }
+        [TestMethod]
+        public void ArrayMedTreOlikaObjektScalene()
+        {
+            Point pointLik = new Point(1, 1);
+            Point pointOlik = new Point(1, 2);
+            Point pointLikAlt = new Point(2, 2);
+
+            Point[] pointOlika = new Point[3] { pointLik, pointOlik, pointLikAlt };
+
+            Triangle ArrayMedTreOlikaObjekt = new Triangle(pointOlika);
+            Assert.IsTrue(ArrayMedTreOlikaObjekt.isScalene());
+        }
+        [TestMethod]
+        public void ArrayMedTreOlikaObjektIsosceles()
+        {
+            Point pointLik = new Point(1, 1);
+            Point pointOlik = new Point(1, 2);
+            Point pointLikAlt = new Point(2, 2);
+
+            Point[] pointOlika = new Point[3] { pointLik, pointOlik, pointLikAlt };
+
+            Triangle ArrayMedTreOlikaObjekt = new Triangle(pointOlika);
+            Assert.IsFalse(ArrayMedTreOlikaObjekt.isIsosceles());
+        }
+        [TestMethod]
+        public void ArrayMedTreOlikaObjektEquilateral()
+        {
+            Point pointLik = new Point(1, 1);
+            Point pointOlik = new Point(1, 2);
+            Point pointLikAlt = new Point(2, 2);
+
+            Point[] pointOlika = new Point[3] { pointLik, pointOlik, pointLikAlt };
+
+            Triangle ArrayMedTreOlikaObjekt = new Triangle(pointOlika);
+            Assert.IsFalse(ArrayMedTreOlikaObjekt.isEquilateral());
+        }
+
+        [TestMethod]
+        public void TreLikaObjektScalene()
+        {
+            Point pointLik = new Point(1, 1);
+            Triangle TreLikaObjekt = new Triangle(pointLik, pointLik, pointLik);
+            Assert.IsFalse(TreLikaObjekt.isScalene());
+        }
+        [TestMethod]
+        public void TreLikaObjektIsosceles()
+        {
+            Point pointLik = new Point(1, 1);
+            Triangle TreLikaObjekt = new Triangle(pointLik, pointLik, pointLik);
+            Assert.IsFalse(TreLikaObjekt.isIsosceles());
+        }
+        [TestMethod]
+        public void TreLikaObjektEquilateral()
+        {
+            Point pointLik = new Point(1, 1);
+            Triangle TreLikaObjekt = new Triangle(pointLik, pointLik, pointLik);
+            Assert.IsTrue(TreLikaObjekt.isEquilateral());
+        }
+        [TestMethod]
+        public void TreObjektTvaOlikaScalene()
+        {
+            Point pointLik = new Point(1, 1);
+            Point pointOlik = new Point(1, 2);
+            Triangle TreObjektTvaOlika = new Triangle(pointLik, pointLik, pointOlik);
+            Assert.IsFalse(TreObjektTvaOlika.isScalene());
+        }
+        [TestMethod]
+        public void TreObjektTvaOlikaIsosceles()
+        {
+            Point pointLik = new Point(1, 1);
+            Point pointOlik = new Point(1, 2);
+            Triangle TreObjektTvaOlika = new Triangle(pointLik, pointLik, pointOlik);
+            Assert.IsTrue(TreObjektTvaOlika.isIsosceles());
+        }
+        [TestMethod]
+        public void TreObjektTvaOlikaEquilateral()
+        {
+            Point pointLik = new Point(1, 1);
+            Point pointOlik = new Point(1, 2);
+            Triangle TreObjektTvaOlika = new Triangle(pointLik, pointLik, pointOlik);
+            Assert.IsFalse(TreObjektTvaOlika.isEquilateral());
         }
     }
 }
